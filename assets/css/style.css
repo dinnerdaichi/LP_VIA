@@ -114,7 +114,7 @@ section + section {
 /*リンクテキスト全般の設定
 ---------------------------------------------------------------------------*/
 a {
-	color: var(--text-via-color);	/*文字色。css冒頭で指定しているtext-colorを読み込みます*/
+	color: #7e7e7e;	/*文字色。css冒頭で指定しているtext-colorを読み込みます*/
 	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
 }
 
@@ -160,7 +160,7 @@ header {
 	align-items: center;			/*垂直揃えの指定。天地中央に配置されるように。*/
 	justify-content: space-between;
 	height: 70px;					/*ヘッダーの高さ*/
-	padding: 1vw 3vw;				/*ヘッダー内の余白。上下、左右への順番。*/
+	padding: 3vw 3vw;				/*ヘッダー内の余白。上下、左右への順番。*/
 	font-family: "Reddit Sans", "Noto Sans JP", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 700;
@@ -189,8 +189,9 @@ header {
 /*ロゴ（テキストにする場合）*/
 #logo a {
 	display: block;text-decoration: none;
-	font-size: 2.5rem;	/*文字サイズを120%に*/
+	font-size: 4rem;	/*文字サイズを120%に*/
 	font-weight: 800;	/*文字の太さ*/
+  color: var(--text-via-color);
 }
 
 
@@ -236,11 +237,12 @@ a.ddmenu::before {
 .large-screen #menubar li a {
 	border-radius: 100px;	/*角を丸くする指定。適当に大きければOKです。*/
 	padding: 0.2rem 1rem;	/*上下、左右へのメニュー内の余白*/
+  font-size: 1.5rem;
 }
 
 /*マウスオン時*/
 .large-screen #menubar li a:hover {
-	background: #fff;		/*背景色*/
+	background: #fff;		背景色
 }
 
 
@@ -362,7 +364,7 @@ main h2 {
 	font-family: "Reddit Sans", "Noto Sans JP", sans-serif;
 	font-size: 3rem;		/*文字サイズ。基準の3倍の大きさに。*/
 	letter-spacing: 0.1em;	/*文字間隔を少しだけ広く*/
-	color: var(--primary-color);	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
+	color: var(--text-via-color);	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
 }
 
 /*bg1背景の上でのh2*/
@@ -658,7 +660,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 ---------------------------------------------------------------------------*/
 .bg1 {
 	position: relative;
-	background: var(--primary-color);	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
+	background: var(--text-via-color);	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
 	color: var(--primary-inverse-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
 	padding-top: 5vw;		/*ボックス内の上に空ける余白。お好みで調整して下さい。*/
 	padding-bottom: 5vw;	/*ボックス内の下に空ける余白。お好みで調整して下さい。*/
@@ -684,7 +686,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	left: 0;
 	width: 100%;
 	height: calc(5vw + 1px);
-	background: var(--primary-color);	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
+	background: var(--text-via-color);	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
 }
 
 .bg1::before {
