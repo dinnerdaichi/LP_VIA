@@ -160,7 +160,7 @@ header {
 	align-items: center;			/*垂直揃えの指定。天地中央に配置されるように。*/
 	justify-content: space-between;
 	height: 70px;					/*ヘッダーの高さ*/
-	padding: 3vw 3vw;				/*ヘッダー内の余白。上下、左右への順番。*/
+	padding: 20px;
 	font-family: "Reddit Sans", "Noto Sans JP", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 700;
@@ -170,20 +170,49 @@ header {
     width: 100%;
 }
 
+@media screen and (max-width: 480px) {
+  /*ヘッダーブロックの高さを小さくする*/
+  header {
+    height: 60px;	/*ヘッダーの高さ*/
+  }
+
+}
+
+header h1{
+height: 100%;
+margin-left: 20px;
+margin-block: 0;
+}
+
 	/*画面幅900px以上の追加指定*/
-	@media screen and (min-width:900px) {
+	@media screen and (max-width:480px) {
 
 	/*ヘッダーブロック*/
 	header {
-		position: fixed;	/*スクロールしても動かないようにする指定。*/
+		position: fixed;
+    margin-left: 0;	/*スクロールしても動かないようにする指定。*/
 	}
+
+  header h1{
+    margin-left: 0;
+  }
 
 	}
 
 /*ロゴ（※画像にする場合）*/
 #logo img {
 	display: block;
-	width: 160px;	/*ロゴ画像の幅*/
+	/* width: 160px;	ロゴ画像の幅 */
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  /*ロゴ画像の幅を小さくする*/
+  #logo img {
+    width: 100%;	/*ロゴ画像の幅*/
+  }
+
 }
 
 /*ロゴ（テキストにする場合）*/
@@ -192,6 +221,15 @@ header {
 	font-size: 4rem;	/*文字サイズを120%に*/
 	font-weight: 800;	/*文字の太さ*/
   color: var(--text-via-color);
+  height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  /*ロゴの文字サイズを小さくする*/
+  #logo a {
+    font-size: 3rem;	/*文字サイズを120%に*/
+  }
+
 }
 
 
@@ -277,7 +315,7 @@ a.ddmenu::before {
 	width: 100%;
 	height: 100%;
 	padding-top: 90px;
-	background: rgba(0,0,0,0.9);		/*背景色*/
+	background:var(--text-via-color);		/*背景色*/
 	animation: animation1 0.2s both;	/*animation1を実行する。0.2sは0.2秒の事。*/
 }
 
@@ -286,15 +324,17 @@ a.ddmenu::before {
 	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
 	margin: 1rem;			/*メニューの外側に空けるスペース*/
 	border-radius: 5px;		/*角を丸くする指定*/
-	padding: 0 2rem;		/*メニュー内の余白。上下、左右へ。*/
+	padding: 0 2rem;
+  background: white;		/*メニュー内の余白。上下、左右へ。*/
 }
 .small-screen #menubar a {
-	padding: 1rem;	/*メニュー内の余白*/
+	padding: 1rem;
+  color: var(--text-via-color);	/*メニュー内の余白*/
 }
 
 /*文字色*/
 .small-screen #menubar, .small-screen #menubar a {
-	color: #fff;
+	color: var(--text-via-color);
 }
 
 /*900px以下でのみ表示させるブロック*/
@@ -618,6 +658,12 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	background: #fff;		/*背景色*/
     grid-template-rows: auto 1fr;	/*１つ目（この場合はfigure要素のサイズ）は自動に、２つ目（この場合はtextブロック））を残った幅で使う*/
 	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.list-grid1 .list:first-child{
+  margin-top: 0;
 }
 
 /*ボックス内のfigure画像*/
@@ -827,6 +873,13 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
     width: 200px;
     margin: 0 auto;
     display: block;
+  }
+
+  @media screen and (max-width: 480px) {
+    #company img{
+      width: 100px;
+    }
+
   }
   #company h2{
     margin-top: 0;
