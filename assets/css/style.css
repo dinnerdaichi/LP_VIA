@@ -823,6 +823,14 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 
 	}/*追加指定ここまで*/
 
+  #company img{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  #company h2{
+    margin-top: 0;
+  }
 
   .company-profile {
   max-width: 600px;
