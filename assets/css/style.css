@@ -408,6 +408,14 @@ main h2 {
 	color: var(--text-via-color);	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
 }
 
+@media screen and (max-width: 480px) {
+  /*h2の文字サイズを小さくする*/
+  main h2 {
+    font-size: 2.5rem;		/*文字サイズ。基準の2.5倍の大きさに。*/
+  }
+
+}
+
 /*bg1背景の上でのh2*/
 .bg1 h2 {
 	color: var(--primary-inverse-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
@@ -659,12 +667,22 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	background: #fff;		/*背景色*/
     grid-template-rows: auto 1fr;	/*１つ目（この場合はfigure要素のサイズ）は自動に、２つ目（この場合はtextブロック））を残った幅で使う*/
 	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
-  margin-top: 30px;
+  /* margin-top: 30px; */
   border-radius: 10px;
 }
 
-.list-grid1 .list:first-child{
-  margin-top: 0;
+
+@media screen and (max-width: 480px) {
+
+  .list-grid1 .list{
+    margin-top: 30px;
+  }
+
+  /*ボックス１個あたりの設定を小さな端末用に上書き*/
+  .list-grid1 .list:first-child {
+    margin-top: 0;
+  }
+
 }
 
 /*ボックス内のfigure画像*/
@@ -720,6 +738,15 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	padding-left: var(--global-space);
 	padding-right: var(--global-space);
 }
+
+@media screen and (max-width: 480px) {
+  /*bg1の上の余白を小さくする*/
+  .bg1 {
+    padding-bottom: 14vw;	/*ボックス内の上に空ける余白。お好みで調整して下さい。*/
+  }
+
+}
+
 .bg1 a {
 	color: inherit;
 }
